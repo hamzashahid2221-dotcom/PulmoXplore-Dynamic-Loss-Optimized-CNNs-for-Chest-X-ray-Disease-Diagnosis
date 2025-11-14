@@ -70,6 +70,19 @@ Where:
 
 This adaptive mechanism improves recall for minority classes without sacrificing precision.
 
+Key Innovations:
+1. **Dynamic per-class adaptation:**  
+   - Unlike standard focal loss, the **class weight** (\(\alpha_t\)) and **focusing parameter** (\(\gamma_t\)) are **adjusted during training** based on class-wise performance metrics (e.g., recall).  
+   - This allows the model to focus more on harder-to-classify or underrepresented classes.
+
+2. **Self-adjusting loss mechanism:**  
+   - The adaptive loss forms a **feedback loop**, where model performance informs how the loss function emphasizes each class.  
+   - This reduces manual hyperparameter tuning and promotes balanced learning.
+
+3. **Stable updates:**  
+   - Adjustments are applied carefully to prevent abrupt changes, ensuring **robust and stable training**.
+
+> **Note:** The full implementation details of this adaptive loss function are part of ongoing research and are available upon request or will be published in a forthcoming manuscript.
 ---
 
 ## 🚀 Training Strategy
